@@ -9,9 +9,9 @@ pub fn get_pid(process_name: &str) -> Result<Vec<String>, String>{
 
     let processes = proc_contents.filter(is_process);
     let processes_with_matching_name = processes.filter(|x| process_name_contains(x, process_name));
-    let correct_pids = processes_with_matching_name.map(|x| x.unwrap())
-                                                    .map(get_filename_str)
-                                                    .collect(); //We checked for Ok() twice now in the filters
+    let correct_pids = processes_with_matching_name.map(|x| x.unwrap()) //We checked for Ok() twice now in the filters.
+                                                   .map(get_filename_str)
+                                                   .collect();
     Ok(correct_pids)
     
 }
