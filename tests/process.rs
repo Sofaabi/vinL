@@ -1,4 +1,4 @@
-use vinL::os::process;
+use vinl::os::process;
 
 //This test should ideally spawn a child process with a known name and pid, then find it. Currently this at least works fine on systemd running systems such as Arch.
 #[test]

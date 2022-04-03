@@ -1,4 +1,4 @@
-use vinL::os::process;
+use vinl::os::process;
 
 fn main() {
 
